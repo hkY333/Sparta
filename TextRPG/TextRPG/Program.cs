@@ -19,6 +19,11 @@ namespace TextRPG
         {
             Console.WriteLine($"잘못된 입력입니다.\n");
         }
+
+        public static void Return()
+        {
+            Console.WriteLine("0. 나가기");
+        }
     }
     
 
@@ -33,16 +38,18 @@ namespace TextRPG
 
         PlayerRole playerRole = new PlayerRole();
 
+        public static string name = "";
+        public static int role;
 
         static void Welcome()
         {
             Console.WriteLine("스파르타 던전에 오신 여러분 환영합니다.");
         }
 
+        
         public static void InputName()
         {
             bool nameSet = false;
-            string name = "";
             do
             {
                 Console.WriteLine($"원하시는 이름을 설정해주세요.\n");
@@ -81,6 +88,7 @@ namespace TextRPG
         public static void SelectRole()
         {
             Console.WriteLine($"원하시는 직업을 선택해주세요.\n");
+
             Console.WriteLine("1. " + PlayerRole.전사);
             Console.WriteLine("2. " + PlayerRole.도적);
             ShortCut.VoidLine();
@@ -88,19 +96,19 @@ namespace TextRPG
             bool roleSet = false;
             do
             {
-                int Role = int.Parse(Console.ReadLine());
+                role = int.Parse(Console.ReadLine());
                 ShortCut.VoidLine();
 
-                switch (Role)
+                switch (role)
                 {
                     case 1:
-                        Role = (int)PlayerRole.전사;
+                        role = (int)PlayerRole.전사;
                         //Console.WriteLine($"당신은 전사을(를) 선택하셨습니다.\n");
                         roleSet = true;
                         break;
 
                     case 2:
-                        Role = (int)PlayerRole.도적;
+                        role = (int)PlayerRole.도적;
                         //Console.WriteLine($"당신은 도적을(를) 선택하셨습니다.\n");
                         roleSet = true;
                         break;
@@ -196,17 +204,19 @@ namespace TextRPG
     public class MyInform
     {
         int level = 1;
-        string myName = "";
-        string myRole = "";
+        string myName;
+        int myRole;
         int attackPower = 10;
         int defensePower = 5;
         int hp = 100;
         int gold = 1500;
 
 
+
         public void PrintInfo()
         {
-            //myName = TextRPG.name
+            myName = TextRPG.name;
+            //myRole = player
 
             Console.WriteLine($"Lv. " + level);
             Console.Write(myName);
@@ -226,6 +236,8 @@ namespace TextRPG
 
             ShortCut.Clear();
             myInform.PrintInfo();
+            ShortCut.VoidLine();
+            ShortCut.Return();
         }
     }
 

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kimab\\OneDrive\\Scripts\\TextRPG\\TextRPG\\TextRPG.csproj",
+      "projectUniqueName": "C:\\Users\\kimab\\OneDrive\\바탕 화면\\Sparta\\TextRPG\\TextRPG\\TextRPG.csproj",
       "projectName": "TextRPG",
-      "projectPath": "C:\\Users\\kimab\\OneDrive\\Scripts\\TextRPG\\TextRPG\\TextRPG.csproj",
+      "projectPath": "C:\\Users\\kimab\\OneDrive\\바탕 화면\\Sparta\\TextRPG\\TextRPG\\TextRPG.csproj",
       "packagesPath": "C:\\Users\\kimab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kimab\\OneDrive\\Scripts\\TextRPG\\TextRPG\\obj\\",
+      "outputPath": "C:\\Users\\kimab\\OneDrive\\바탕 화면\\Sparta\\TextRPG\\TextRPG\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
